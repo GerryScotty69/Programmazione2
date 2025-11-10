@@ -1,0 +1,27 @@
+
+public class Consegna {
+	private String stato;
+	private String dimensione;
+	
+	public Consegna(String dimensione) {
+		this.dimensione = dimensione;
+		stato = "elaborazione";	//la consegna non è stata assegnata ancora a nessuno
+		
+	}
+	
+	public void SetStato(String stato) {
+		this.stato = stato;
+	}
+	
+	public String GetStato() {
+		return stato;
+	}
+	
+	public String GetDimensione() {
+		return dimensione;
+	}
+	
+	public String SetDimensione(String dimensione) {
+		this.dimensione = dimensione;
+	}
+}

@@ -1,0 +1,33 @@
+Una società sportiva vuole sviluppare un piccolo sistema per gestire i propri giocatori, le partite disputate e 
+le statistiche di squadra. Ogni giocatore ha un nome e un cognome, un ruolo in campo(es. "attaccante", 
+"difensore", ecc.) e un numero di maglia. Ogni partita è caratterizzata da un avversario, un risultato e dal 
+numero di gol segnati e subiti dalla squadra e tramite il sistema la società vuole tenere traccia delle partite
+disputate. Il sistema deve permettere di aggiungere nuovi giocatori alla rosa, registrare nuove partite, 
+calcolare il numero di vittorie, pareggi e sconfitte e stampare le informazioni sulla squadra, sui giocatori 
+e sul rendimento complessivo.
+
+
+Schema delle classi
+	Società Sportiva:
+		nome
+		giocatore
+		partita
+		METODI:
+			void aggiungiGiocatore();
+			void aggiungiPartita();
+			void calcolaRisultati();
+			void InformazioniSquadra();
+			void InformazioniGiocatore();
+			void RendimentoComplessivo();
+		
+	Giocatore:
+		nome
+		cognome
+		ruolo
+		numero di maglia
+	
+	Partita:
+		avversario
+		numero di gol segnati
+		numero di gol subiti
+		

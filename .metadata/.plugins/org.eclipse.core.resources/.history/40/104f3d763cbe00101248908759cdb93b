@@ -1,0 +1,17 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		GestoreOperazioni gestore = new GestoreOperazioni("Fintech");
+		
+		Ricarica r1 = new Ricarica("");
+		PagamentoCarta pc1 = new PagamentoCarta("");
+		Bonifico b1 = new Bonifico("");
+		Prelievo p1 = new Prelievo("");
+		
+		
+		
+
+	}
+
+}

@@ -1,0 +1,28 @@
+import java.sql.Date;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Gioco gioco = new Gioco("Lupus in Fabula");
+		
+		Eroe e1 = new Eroe("Luca");
+		Licantropo l1 = new Licantropo("Mariagrazia");
+		Vampiro v1 = new Vampiro("Stefan");
+		
+		gioco.add(e1,l1,v1);
+		
+		gioco.combattimento(e1);
+		gioco.combattimento(e1);
+		gioco.comabttimento(e1);
+		
+		gioco.combattimento(v1);
+		
+		gioco.combattimento(l1);
+		
+		gioco.
+		
+		
+		
+	}
+
+}

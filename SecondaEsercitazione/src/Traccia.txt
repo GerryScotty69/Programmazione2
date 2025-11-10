@@ -1,0 +1,41 @@
+Un cinema vuole realizzare un sistame per gestire le sale i film in programmazione e le proiezioni. Ogni film ha
+un titolo, un genere e una durata in in minuti. Il cinema dispone di una o più sale, ciascuna con un nome e un numero
+di posti disponibili. Ogni proiezione rappresenta la visione di un film in una sala in una certa data e ora, e include
+il numero di biglietti venduti. Il sistema dovrà permettere fi aggiungere film al catalogo, aggiungere sale al cinema,
+programmare nuove proiezioni, mostrare tutte le proiezioni in programma con i relativi dati, calcolare la percentuale
+di occupazione della sala per ciascuna proiezione.
+
+
+
+Classi:
+	Cinema:
+		metodi
+		aggiungi film
+	    aggiungi sala
+		aggiungi proiezione
+	
+	Film:
+		titolo
+		genere
+		durata in minuti
+	
+		metodi
+	Sala:
+		nome
+		capienza disponibile
+		
+		metodi:
+	
+	Proiezione:
+		Film
+		Sala
+		Orario
+		Data	
+		biglietti venduti
+		
+		metodi:
+		aggiungi proiezioni
+		mostra proiezioni
+		percentuale in sala
+		
+	

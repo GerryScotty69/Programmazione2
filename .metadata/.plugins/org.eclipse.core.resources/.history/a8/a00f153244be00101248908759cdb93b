@@ -1,0 +1,9 @@
+
+public class Eroe implements Umano{
+	private int forza;
+	private String nome;
+	public Eroe(String nome) {
+		this.nome = nome;
+		
+	}
+}

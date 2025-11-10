@@ -1,0 +1,32 @@
+Un agenzia viaggi vuole sviluppare una semplice applicazione per gestire i viaggi che offre e 
+le prenotazioni dei clienti. Il sistema dovrà consentire di memorizzare le informazioni sui viaggi, registrare
+i clienti e gestire le prenotazioni effettuate.
+
+Ogni viaggio proposto dall'agenzia ha una destinazione, una durata in giorni e un prezzo per persona, mentre 
+un cliente dell'agenzia è identificato dal nome e cognome e da un indirizzo e-mail di contatto.
+
+
+...
+...
+
+Le classi sono :Agenzia, Viaggio, Prenotazione, Cliente.
+
+
+Agenzia: +++
+	memorizzare informazioni sui viaggi;
+	registrazione clieni;
+	gestire le prenotazioni effettuate;
+	
+Viaggio: ++++
+	Meta;
+	prezzo a cliente;
+	durata in giorni;
+	
+Prenotazione: ++++
+	numero di clienti;
+	calcolo totale del costo della prenotazione ( clienti * costo viaggio)
+	
+Cliente: +++++
+	nome;
+	cognome;
+	indirizzo e-mail;

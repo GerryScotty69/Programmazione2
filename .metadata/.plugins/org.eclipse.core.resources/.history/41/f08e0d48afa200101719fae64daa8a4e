@@ -1,0 +1,11 @@
+import java.io.*;
+
+public class Esempio {
+
+	public static void main(String[] args) {
+		BufferedReader stantardin = new BufferedReader(new InputStreamReader(System.in));
+		float[] x = new float[10];
+		float[] y = new float[20];
+	}
+
+}

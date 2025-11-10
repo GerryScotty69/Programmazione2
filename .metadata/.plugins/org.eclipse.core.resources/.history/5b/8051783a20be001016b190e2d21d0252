@@ -1,0 +1,72 @@
+
+public class Gestore {
+	private String nomeSistema;
+	SistemaDiConsegna[] sistemiDiConsegna;
+	Consegna[] consegne;
+	private int numSistemiDiConsegna;
+	private int numConsegne;
+	
+	private static final int maxSistemiDiConsegna = 1000;
+	private static final int maxConsegne = 10000;
+	
+	public Gestore(String nomeSistema) {
+		this.nomeSistema = nomeSistema;
+		this.sistemiDiConsegna = new SistemaDiConsegna[maxSistemiDiConsegna];
+		this.consegne = new Consegna[maxConsegne];
+		numSistemiDiConsegna = 0;
+		numSistemiDiConsegna = 0;
+	}
+	
+	public void addServiziDiConsegna(SistemaDiConsegna s1) {
+		if(numSistemiDiConsegna < maxSistemiDiConsegna) {
+			sistemiDiConsegna[numSistemiDiConsegna++] = s1;
+		}else {
+			System.out.println("Numero massimo di sistemi di consegna raggiunto!");
+		}
+	}
+	
+	public void addConsegna(Consegna c) {
+		if(numConsegne < maxConsegne) {
+			consegne[numConsegne++] = c;
+		}else {
+			System.out.println("Numero massimo di consegne raggiunto!");
+		}
+	}
+	
+	public void listaServiziDiConsegnaDisponibili() {
+		System.out.println("~~~~~~~~~~ LISTA SERVIZI DI CONSEGNA DISPOINIBILI ~~~~");
+		for(int i = 0; i < numSistemiDiConsegna; i ++) {
+			if(sistemiDiConsegna[i].StatoOperazione() == true) {
+				//Il Sistema di consegna è libero
+				sistemiDiConsegna[i].StampaInfo();
+			}
+		}
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+	}
+	
+	public void avviaConsegna(Consegna c) {
+		for(int i = 0; i < numSistemiDiConsegna; i ++) {
+			if(sistemiDiConsegna[i].StatoOperazione() == true) {
+				//Il Sistema di consegna è libero
+				if(sistemiDiConsegna[i].RitiroPacco(c) == true) {
+					//se il metodo restituisce true vuol dire che la consegna è stata assegnata correttamente
+					System.out.println("Consegna assegnata correttamente al sistema: ");
+					sistemiDiConsegna[i].StampaInfo();
+					return;
+				}
+			}
+		}
+	}
+	
+	public void statoConsegne() {
+		System.out.println("~~~~~~~~~~ STATO CONSEGNE ~~~~~~~~~~");
+		for(int i = 0; i < numConsegne; i++) {
+			System.out.println("Dimensione: " + consegne[i].getDimensione());
+			System.out.println("Tipologia: " + consegne[i].getTipologia());
+			System.out.println("Stato: " + consegne[i].getStato());
+		}
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+	}
+	
+	
+}

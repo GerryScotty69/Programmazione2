@@ -1,0 +1,7 @@
+
+public interface SistemaDiConsegna {
+	
+	public boolean RitiroPacco(Consegna c);
+	public void StampaStatoOperazione();
+	public void ConsegnaEffettuata();
+}

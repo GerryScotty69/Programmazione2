@@ -1,0 +1,14 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		GestoreOperazioni gestore = new GestoreOperazioni("Fintech");
+		
+		Ricarica r1 = new Ricarica("");
+		PagamentoCarta pc = new PagamentoCarta("");
+		Bonifico b1 = new Bonifico("");
+		CiaoMArco marco = new marco("Vaffanculo");
+
+	}
+
+}

@@ -1,0 +1,63 @@
+
+public class BiciElettrica {
+	private String produttore;
+	private boolean stato;
+	Consegna c = null;
+	
+	public BiciElettrica(String produttore) {
+		this.produttore = produttore;
+		stato = true;						//il veicolo non è impegnato
+	}
+	
+	
+	public boolean RitiroPacco(Consegna c) {
+		if(c.getTipologia().equalsIgnoreCase("urbana")) {//La bici elettrica puo effettuare solo consegne urbane
+			stato = false; 						//il veicolo è adesso impegnato
+			this.c = c;
+			this.c.setStato("in consegna");; 	//il pacco è in consegna
+			return true;
+		}else {
+			System.out.println("La consegna è troppo grande per essere consegnata");
+			return false;
+		}
+	}
+	
+	public void StampaStatoOperazione() {
+		if(c == null) {
+			System.out.println("Non ci sono consegne all'attivo!");
+		}else {
+			System.out.println("Stato:" + c.getStato());
+		}
+	}
+	
+	public void ConsegnaEffettuata() {
+		if(c == null) {
+			System.out.println("Non ci sono consegne all'attivo!");
+		}else {
+			stato = false;					//Il veicolo sarà impegnabile
+			c.setStato("consegnato");		//la consegna è stata effettuata
+			System.out.println("La consegna effettuata; coordinate consegna: 41° 53' 24'' ");
+		}					
+		
+	}
+
+
+	public String getProduttore() {
+		return produttore;
+	}
+
+
+	public void setProduttore(String produttore) {
+		this.produttore = produttore;
+	}
+
+
+	public boolean isStato() {
+		return stato;
+	}
+
+
+	public void setStato(boolean stato) {
+		this.stato = stato;
+	}
+}

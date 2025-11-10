@@ -1,0 +1,63 @@
+
+public class Drone implements SistemaDiConsegna{
+	
+	private String produttore;
+	private boolean stato;
+	Consegna c = null;
+	
+	public Drone(String produttore) {
+		this.produttore = produttore;
+		stato = true;						//il veicolo non è impegnato
+	}
+	
+	
+	public boolean RitiroPacco(Consegna c) {
+		if(c.getDimensione().equalsIgnoreCase("piccola")) {//il drone puo portare solo piccoli pacchi
+			stato = false; 						//il veicolo è adesso impegnato
+			this.c = c;
+			this.c.setStato("in consegna"); 	//il pacco è in consegna
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	public void StampaInfo() {
+		System.out.println("|Nome produttore drone: " + produttore);
+	}
+	
+	public boolean StatoOperazione() {
+		return isStato();
+	}
+	
+	public String getProduttore() {
+		return produttore;
+	}
+
+
+	public void setProduttore(String produttore) {
+		this.produttore = produttore;
+	}
+
+
+	public boolean isStato() {
+		return stato;
+	}
+
+
+	public void setStato(boolean stato) {
+		this.stato = stato;
+	}
+
+
+	public void ConsegnaEffettuata() {
+		if(c == null) {
+			System.out.println("Non ci sono consegne all'attivo!");
+		}else {
+			stato = false;					//Il veicolo sarà impegnabile
+			c.setStato("consegnato");		//la consegna è stata effettuata
+			System.out.println("La consegna effettuata; coordinate consegna: 41° 53' 24'' ");
+		}					
+		
+	}
+}

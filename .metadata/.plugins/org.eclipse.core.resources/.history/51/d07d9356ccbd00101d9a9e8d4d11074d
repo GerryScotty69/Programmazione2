@@ -1,0 +1,58 @@
+
+public class Furgone implements SistemaDiConsegna{
+	private String nomeCorriere;
+	private boolean stato;
+	Consegna c = null;
+	
+	public Furgone(String nomeCorriere) {
+		this.nomeCorriere = nomeCorriere;
+		stato = true;						//il veicolo non è impegnato
+	}
+	
+	
+	public boolean RitiroPacco(Consegna c) {
+		stato = false; 						//il veicolo è adesso impegnato
+		this.c = c;
+		this.c.setStato("in consegna");; 	//il pacco è in consegna
+		return true;
+	}
+	
+	public void StatoOperazione() {
+		if(c == null) {
+			System.out.println("Non ci sono consegne all'attivo!");
+		}else {
+			System.out.println("Stato:" + c.getStato());
+		}
+	}
+	
+	public void ConsegnaEffettuata() {
+		if(c == null) {
+			System.out.println("Non ci sono consegne all'attivo!");
+		}else {
+			stato = false;					//Il veicolo sarà impegnabile
+			c.setStato("consegnato");		//la consegna è stata effettuata
+			System.out.println("La consegna è stata registrata manualmente da " + getNomeCorriere());
+		}					
+		
+	}
+
+
+	public String getNomeCorriere() {
+		return nomeCorriere;
+	}
+
+
+	public void setNomeCorriere(String nomeCorriere) {
+		this.nomeCorriere = nomeCorriere;
+	}
+
+
+	public boolean isStato() {
+		return stato;
+	}
+
+
+	public void setStato(boolean stato) {
+		this.stato = stato;
+	}
+}

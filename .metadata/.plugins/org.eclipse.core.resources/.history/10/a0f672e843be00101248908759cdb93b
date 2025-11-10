@@ -1,0 +1,4 @@
+
+public class Eroe implements Umano{
+	int forza;
+}

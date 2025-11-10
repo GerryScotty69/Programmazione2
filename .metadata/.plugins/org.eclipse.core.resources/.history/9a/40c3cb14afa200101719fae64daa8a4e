@@ -1,0 +1,9 @@
+import java.io.*;
+
+public class Esempio {
+
+	public static void main(String[] args) {
+		BufferReader stantardin = new BuffeReader
+	}
+
+}

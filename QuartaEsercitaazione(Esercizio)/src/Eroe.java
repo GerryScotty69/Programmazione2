@@ -1,0 +1,34 @@
+
+public class Eroe implements Umano{
+	private int forza;
+	private String nome;
+	
+	public Eroe(String nome) {
+		this.nome = nome;
+		forza = 10;
+	}
+	
+	public void combatti() {
+		
+	}
+	
+	
+
+	public int getForza() {
+		return forza;
+	}
+
+	public void setForza(int forza) {
+		this.forza = forza;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	
+}

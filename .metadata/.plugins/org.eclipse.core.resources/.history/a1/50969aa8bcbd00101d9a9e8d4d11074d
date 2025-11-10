@@ -1,0 +1,13 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		//Definizione Gestore delle consegne
+		Gestore g = new Gestore("BRT");
+		
+		
+
+	}
+
+}

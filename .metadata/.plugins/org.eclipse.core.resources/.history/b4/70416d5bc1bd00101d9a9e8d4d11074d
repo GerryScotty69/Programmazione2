@@ -1,0 +1,8 @@
+
+public class Consegna {
+	private String stato;
+	
+	public Consegna() {
+		stato = "magazzino";
+	}
+}

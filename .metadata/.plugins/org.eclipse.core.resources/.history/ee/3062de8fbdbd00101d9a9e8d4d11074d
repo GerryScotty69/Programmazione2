@@ -1,0 +1,19 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		//Definizione Gestore delle consegne
+		Gestore gestore_delle_consegne = new Gestore("BRT");
+		
+		Drone d1 = new Drone("Parrot");
+		
+		Furgone f1 = new Furgone("Francesco");
+		
+		Bici b1 = new Bici("Haibike");
+		
+		gestore_delle_consegne.add(d1, f1, b1);
+
+	}
+
+}

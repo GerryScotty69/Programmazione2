@@ -1,0 +1,7 @@
+
+public class Eroe implements Umano{
+	private int forza;
+	public Eroe() {
+		
+	}
+}

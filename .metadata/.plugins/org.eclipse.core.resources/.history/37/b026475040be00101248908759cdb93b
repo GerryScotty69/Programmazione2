@@ -1,0 +1,12 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		Gioco gioco = new Gioco("Lupus in Fabula");
+		
+		Eroe e1 = new Eroe("");
+		Licantropo l1 = new Licantropo("");
+		Vampiro v1 = new vampiro("");
+	}
+
+}

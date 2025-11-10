@@ -1,0 +1,9 @@
+
+public class Consegna {
+	private String stato;
+	
+	public Consegna() {
+		stato = "elaborazione";	//la consegna non è stata assegnata ancora a nessuno
+		
+	}
+}

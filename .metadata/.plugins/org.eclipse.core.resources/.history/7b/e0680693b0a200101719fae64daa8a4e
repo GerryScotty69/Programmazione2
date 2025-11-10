@@ -1,0 +1,23 @@
+import java.io.*;
+
+public class Esempio {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader stantardin = new BufferedReader(new InputStreamReader(System.in));  //Creazione instanza della classe BufferedReader
+		float[] x = new float[10];
+		float[] y = new float[10];
+		float x0 = 0, y0 = 0;
+		
+		for(int i = 0; i < 10; i ++) {
+			System.out.print("inserisci x: ");
+			x[i] = Float.parseFloat(stantardin.readLine()); //Acquisizione valore float
+			System.out.println("Inserisci y: ");
+			y[i] = Float.parseFloat(stantardin.readLine()); //Acquisizione valore float
+
+		}
+		
+		System.out.print("Inserisci valore x0: ");
+		x0 = Float.parseFloat(stantardin.readLine());		//Acquisizione valore float
+	}
+
+}

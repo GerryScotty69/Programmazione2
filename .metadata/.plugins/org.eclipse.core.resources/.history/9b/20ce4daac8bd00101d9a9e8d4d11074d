@@ -1,0 +1,33 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		//Definizione Gestore delle consegne
+		Gestore gestoreDelleConsegne = new Gestore("BRT");
+		
+		Consegna c1 = new Consegna("piccolo");
+		
+		Drone d1 = new Drone("Parrot");
+		Furgone f1 = new Furgone("Francesco");
+		BiciElettrica be1 = new BiciElettrica("Haibike");
+		
+		gestoreDelleConsegne.addVeicolo(d1);
+		gestoreDelleConsegne.addConsegna(c1);
+		
+		d1.RitiroPacco(c1);
+		d1.StampaStatoOperazione();
+		d1.ConsegnaEffettuata();
+
+		/*Furgone f1 = new Furgone("Francesco");
+		
+		Bici b1 = new Bici("Haibike");
+		
+		gestoreDelleConsegne.aggiungiVeicoli(d1, f1, b1);*/
+	
+		
+		
+
+	}
+
+}

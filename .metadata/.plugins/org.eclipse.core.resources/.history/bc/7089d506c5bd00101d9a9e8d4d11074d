@@ -1,0 +1,26 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		//Definizione Gestore delle consegne
+		Gestore gestoreDelleConsegne = new Gestore("BRT");
+		
+		Consegna c1 = new Consegna("piccolo");
+		
+		Drone d1 = new Drone("Parrot");
+		
+		d1.RitiroPacco(c1);
+		
+		Furgone f1 = new Furgone("Francesco");
+		
+		Bici b1 = new Bici("Haibike");
+		
+		gestoreDelleConsegne.aggiungiVeicoli(d1, f1, b1);
+	
+		
+		
+
+	}
+
+}

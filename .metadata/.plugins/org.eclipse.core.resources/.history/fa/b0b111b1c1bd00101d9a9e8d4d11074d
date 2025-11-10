@@ -1,0 +1,10 @@
+
+public interface SistemaDiConsegna {
+	
+	String dimensione;
+	
+	
+	public void RitiroPacco(Consegna c);
+	public void StampaStato();
+	public void ConsegnaEffettuata();
+}

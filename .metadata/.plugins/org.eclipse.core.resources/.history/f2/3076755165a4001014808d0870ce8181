@@ -1,0 +1,40 @@
+import java.io.*;
+
+/**
+ * Commenti per Documentazioni
+ */
+
+//Commento inline (su linea)
+/*
+Commento multi line
+*/
+public class Esempio {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader stantardin = new BufferedReader(new InputStreamReader(System.in));  //Creazione instanza della classe BufferedReader
+		float[] x = new float[10];
+		float[] y = new float[10];
+		float x0 = 0, y0 = 0;
+		
+		for(int i = 0; i < 10; i ++) {
+			System.out.print("inserisci x: ");
+			x[i] = Float.parseFloat(stantardin.readLine()); //Acquisizione valore float
+			System.out.print("Inserisci y: ");
+			y[i] = Float.parseFloat(stantardin.readLine()); 
+
+		}
+		
+		System.out.print("Inserisci valore x0: ");
+		x0 = Float.parseFloat(stantardin.readLine());		
+		
+		int j = 0;
+		while( x[j] < x0 && j < 10) {
+			j++;
+			if( j > 0 && j < 9) {
+					y0 = (x0 - x[j]) * (y[j+1] - y[j]) / (x[j+1] - x[j]) + y[j];
+					System.out.println("Valore in f("+x0+")="+y0);
+			}
+		}
+	}
+
+}

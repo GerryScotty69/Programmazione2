@@ -1,0 +1,11 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		GestoreOperazioni gestore = new GestoreOperazioni("Fintech");
+		
+		Ricarica r1 = new Ricarica("");
+
+	}
+
+}

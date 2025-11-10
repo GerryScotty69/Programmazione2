@@ -1,0 +1,54 @@
+
+public class Gestore {
+	private String nomeSistema;
+	SistemaDiConsegna[] sistemiDiConsegna;
+	Consegna[] consegne;
+	private int numSistemiDiConsegna;
+	private int numConsegne;
+	
+	private static final int maxSistemiDiConsegna = 1000;
+	private static final int maxConsegne = 10000;
+	
+	public Gestore(String nomeSistema) {
+		this.nomeSistema = nomeSistema;
+		this.sistemiDiConsegna = new SistemaDiConsegna[maxSistemiDiConsegna];
+		numSistemiDiConsegna = 0;
+		numSistemiDiConsegna = 0;
+	}
+	
+	public void addServiziDiConsegna(SistemaDiConsegna s1) {
+		if(numSistemiDiConsegna < maxSistemiDiConsegna) {
+			sistemiDiConsegna[numSistemiDiConsegna++] = s1;
+		}else {
+			System.out.println("Numero massimo di sistemi di consegna raggiunto!");
+		}
+	}
+	
+	public void addConsegna(Consegna c) {
+		if(numConsegne < maxConsegne) {
+			consegne[numConsegne++] = c;
+		}else {
+			System.out.println("Numero massimo di consegne raggiunto!");
+		}
+	}
+	
+	public void listaServiziDiConsegnaDisponibili() {
+		for(int i = 0; i < numSistemiDiConsegna; i ++) {
+			if(sistemiDiConsegna[i].StatoOperazione() == true) {
+				//Il Sistema di consegna è libero
+				sistemiDiConsegna[i].StampaInfo();
+			}
+		}
+	}
+	
+	public void avviaConsegna(Consegna c) {
+		for(int i = 0; i < numSistemiDiConsegna; i ++) {
+			if(sistemiDiConsegna[i].StatoOperazione() == true) {
+				//Il Sistema di consegna è libero
+				if(sistemiDiConsegna[i].RitiroPacco(c)) {
+			}
+		}
+	}
+	
+	
+}

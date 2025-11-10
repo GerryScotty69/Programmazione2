@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="Prenotazione"/>
+    <fullyQualifiedTypeName name="Proiezione"/>
+    <fullyQualifiedTypeName name="Film"/>
+    <fullyQualifiedTypeName name="Giocatore"/>
+    <fullyQualifiedTypeName name="Partita"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="Item"/>
+    <fullyQualifiedTypeName name="BiciElettrica"/>
+    <fullyQualifiedTypeName name="SistemaDiConsegna"/>
+    <fullyQualifiedTypeName name="Consegna"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="Personaggio"/>
+    <fullyQualifiedTypeName name="Umano"/>
+</qualifiedTypeNameHistroy>
