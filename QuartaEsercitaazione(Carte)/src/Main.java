@@ -1,4 +1,4 @@
-import java.sql.Date;
+import java.util.Date;
 
 public class Main {
 
@@ -6,20 +6,25 @@ public class Main {
 		Gioco gioco = new Gioco("Lupus in Fabula");
 		
 		Eroe e1 = new Eroe("Luca");
-		Licantropo l1 = new Licantropo("Mariagrazia");
 		Vampiro v1 = new Vampiro("Stefan");
+		Licantropo l1 = new Licantropo("Mariagrazia");
+
 		
-		gioco.add(e1,l1,v1);
+		gioco.add(e1);
+		gioco.add(v1);
+		gioco.add(l1);
 		
-		gioco.combattimento(e1);
-		gioco.combattimento(e1);
-		gioco.comabttimento(e1);
+		e1.combatti();
+		e1.combatti();
+		e1.combatti();
 		
-		gioco.combattimento(v1);
+		v1.azzanna();
 		
-		gioco.combattimento(l1);
-		l1.setIsUomo(false);
-		gioco.combattimento(l1);
+		l1.combatti();
+		gioco.setNotteDiLunaPiena();		//simulazione notte di luna piena
+		l1.combatti	();				//Controllo che corregge combatti in azzanna
+		
+		gioco.riepilogo();
 	}
 
 }

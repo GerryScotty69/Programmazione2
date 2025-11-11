@@ -1,16 +1,17 @@
 
-public class Eroe implements Umano{
+public class Vampiro implements Mostro{
+	
 	private int forza;
 	private String nome;
 	
-	public Eroe(String nome) {
+	public Vampiro(String nome) {
 		this.nome = nome;
-		forza = 10;
+		forza = 15;
 	}
 	
-	public void combatti() {
-		setForza(forza- 3);
-		System.out.println("Eroe " + getNome() + " combatte\n");
+	public void azzanna() {
+		setForza(forza - 2);
+		System.out.println("Vampiro " + getNome() + " azzanna\n");
 	}
 
 	public int getForza() {
@@ -29,6 +30,4 @@ public class Eroe implements Umano{
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
-	
 }

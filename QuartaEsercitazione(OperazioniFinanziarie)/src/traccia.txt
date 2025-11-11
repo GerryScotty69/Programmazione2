@@ -1,0 +1,12 @@
+Un’azienda fintech sta sviluppando un sistema per gestire diverse operazioni finanziarie eseguite dai propri 
+clienti: bonifici, pagamenti con carta, ricariche e prelievi. Ogni operazione deve contenere informazioni comuni, 
+come l’importo, la data, e l’identificativo del cliente che la effettua. Tutte le operazioni possono essere eseguite e 
+devono fornire un riepilogo del risultato (ad esempio, conferma o errore). Tuttavia, le modalità di esecuzione cambiano 
+a seconda del tipo di operazione: 
+  • un bonifico richiede il conto del destinatario; 
+  • un pagamento con carta coinvolge un circuito di pagamento esterno; 
+  • una ricarica cellulare può interfacciarsi con servizi terzi. 
+Inoltre, alcune operazioni (bonifico e pagamento con carta) possono richiedere autenticazioni speciali, 
+come la verifica biometrica o un codice temporaneo, mentre altre no. 
+Progettare la struttura del sistema in modo da permettere di gestire in modo flessibile e coerente diverse tipologie di operazioni, 
+garantendo che ciascuna possa essere eseguita e fornire il proprio riepilogo.   
